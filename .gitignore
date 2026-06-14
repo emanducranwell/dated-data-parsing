@@ -1,2 +1,8 @@
 chunked_json/all-objects-chunked.json
 json/all-objects.json
+selected/random_10_selected_objects_by_room.json
+selected/random_15_selected_objects_by_room.json
+selected/random_20_selected_objects_by_room.json
+selected/random_20_selected_objects_by_room_chunked.json
+selected/random_30_selected_objects_by_room.json
+selected/selected_objects_by_room.json

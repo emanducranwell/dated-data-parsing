@@ -4,9 +4,23 @@ from collections import defaultdict
 from pathlib import Path
 
 INPUT_FILE = "json/all-objects.json"
-OUTPUT_FILE = "selected/selected_objects_by_room.json"
+OUTPUT_FILE = "selected/random_30_selected_objects_by_room.json"
 
-OBJECTS_PER_ROOM = 10
+OBJECTS_PER_ROOM = 30
+
+VALID_ROOMS = {
+    "1", "2", "2a", "3", "4",
+    "6", "7", "8", "9", "10",
+    "12", "13", "14", "15", "16", "17", "18", "19", "20",
+    "21", "22", "23", "24", "25", "26", "27", "30",
+    "33", "33a", "33b", "35", "38", "39",
+    "40", "41", "42", "43", "43a",
+    "46", "47", "48", "49", "50", "51", "52", "53", "54",
+    "55", "56", "57", "58", "59",
+    "61", "62", "63", "64", "65", "66", "67", "68",
+    "69", "70", "71", "72", "73",
+    "90", "90a", "92", "93", "94", "95"
+}
 
 Path("selected").mkdir(exist_ok=True)
 
@@ -16,9 +30,9 @@ with open(INPUT_FILE, "r", encoding="utf-8") as f:
 grouped = defaultdict(list)
 
 for obj in objects:
-    room_number = obj.get("room_number")
+    room_number = str(obj.get("room_number", "")).lower().strip()
 
-    if room_number:
+    if room_number in VALID_ROOMS:
         grouped[room_number].append(obj)
 
 selected = []
