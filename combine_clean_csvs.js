@@ -7,7 +7,7 @@ const INPUT_DIR = "csv";
 const OUTPUT_FILE = "cleaned/all-objects-cleaned.csv";
 
 const ROOM_TO_CULTURAL_LOCATION = {
-  1: "Themes",
+  1: "Enlightenment",
   2: "Themes",
   "2a": "Themes",
   3: "Exhibitions",
@@ -33,6 +33,7 @@ const ROOM_TO_CULTURAL_LOCATION = {
   25: "Africa",
   26: "Americas",
   27: "Americas",
+  30: "Exhibitions",
   33: "Asia",
   "33a": "Asia",
   "33b": "Asia",
@@ -65,7 +66,7 @@ const ROOM_TO_CULTURAL_LOCATION = {
   65: "Ancient Egypt",
   66: "Ancient Egypt",
   67: "Asia",
-  68: "Themes",
+  68: "Themed Rooms",
   69: "Ancient Greece and Rome",
   70: "Ancient Greece and Rome",
   71: "Ancient Greece and Rome",
